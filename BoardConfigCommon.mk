@@ -63,7 +63,6 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(COMMON_PATH)/framework_compatibility_matrix.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
-    vendor/lineage/config/device_framework_matrix.xml
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
 
@@ -86,6 +85,7 @@ BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_RAMDISK_OFFSET := 0x01000000
 TARGET_KERNEL_CONFIG := lineageos_caymanlm_defconfig
 TARGET_KERNEL_SOURCE := kernel/lge/sm7250
+TARGET_KERNEL_NO_GCC := true
 
 # Media
 TARGET_USES_ION := true

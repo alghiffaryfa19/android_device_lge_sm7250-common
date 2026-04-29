@@ -85,7 +85,7 @@ PRODUCT_PACKAGES += \
     android.hardware.boot-service.qti \
     android.hardware.boot-service.qti.recovery
 
-$(call soong_config_set,QTI_GPT_UTILS,USE_BSG_FRAMEWORK,false)
+$(call soong_config_set_bool,QTI_GPT_UTILS,USE_BSG_FRAMEWORK,false)
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -140,6 +140,9 @@ PRODUCT_PACKAGES += \
     libgeofencing:64 \
     libgnss:64 \
     libloc_socket:64
+
+# Gallery
+$(call soong_config_set_bool,stagefright, target_disable_thumbnail_block_model, true)
 
 PRODUCT_PACKAGES += \
     flp.conf \
